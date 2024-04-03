@@ -24,4 +24,4 @@ VALUES
     ('Besiktas JK', 'Süper Lig', 'Turquía'),
     ('SSC Napoli', 'Serie A', 'Italia'),
     ('Atlético Madrid', 'La Liga', 'España');
-    
+
