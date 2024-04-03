@@ -1,3 +1,5 @@
+@CREATE ALIAS IF NOT EXISTS BCryptPasswordEncoder FOR "org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder.encode(java.lang.CharSequence)";
+
 INSERT INTO Equipo (nombre, liga, pais)
 VALUES 
     ('Real Madrid', 'La Liga', 'España'),
@@ -24,4 +26,6 @@ VALUES
     ('Besiktas JK', 'Süper Lig', 'Turquía'),
     ('SSC Napoli', 'Serie A', 'Italia'),
     ('Atlético Madrid', 'La Liga', 'España');
-    
+
+INSERT INTO users (username, password, firstname, lastname, role)
+VALUES ('test',CALL BCryptPasswordEncoder('1234'),'Samuel','Bustos')
