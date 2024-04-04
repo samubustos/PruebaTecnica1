@@ -1,3 +1,5 @@
+
+
 INSERT INTO Equipo (nombre, liga, pais)
 VALUES 
     ('Real Madrid', 'La Liga', 'España'),
@@ -25,3 +27,5 @@ VALUES
     ('SSC Napoli', 'Serie A', 'Italia'),
     ('Atlético Madrid', 'La Liga', 'España');
 
+INSERT INTO users (username, password, firstname, lastname, role)
+ VALUES ('test','$2a$10$zTnGlInk6ojiit4Q7W3Tu.r8QRvMym.FRiukDtnqtOEiDqt3HHsLe','Samuel','Bustos','ADMIN')

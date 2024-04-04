@@ -7,7 +7,7 @@ public interface IEquipoService {
     List<Equipo> getAll();
     Equipo getById(Long id);
     List<Equipo> searchByName(String nombre);
-    void save(Equipo equipo);
+    Equipo save(Equipo equipo);
     void remove(Long id);
     Equipo update(Long id, Equipo equipo);
 }

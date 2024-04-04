@@ -5,54 +5,34 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
+@Setter
+@Getter
 @Entity
 @Table(
         name = "Equipo"
 )
+
 public class Equipo {
     @Id
     @GeneratedValue(
             strategy = GenerationType.IDENTITY
     )
     private Long id;
+    @NotBlank
     private String nombre;
+    @NotBlank
     private String liga;
+    @NotBlank
     private String pais;
 
-    public Equipo() {
+    public Equipo(){
     }
 
-    public Long getId() {
-        return this.id;
-    }
-
-    public String getNombre() {
-        return this.nombre;
-    }
-
-    public String getLiga() {
-        return this.liga;
-    }
-
-    public String getPais() {
-        return this.pais;
-    }
-
-    public void setId(final Long id) {
-        this.id = id;
-    }
-
-    public void setNombre(final String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setLiga(final String liga) {
-        this.liga = liga;
-    }
-
-    public void setPais(final String pais) {
-        this.pais = pais;
-    }
 }
 

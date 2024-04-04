@@ -3,56 +3,70 @@ package com.pruebatecnica.prueba.services;
 import com.pruebatecnica.prueba.entities.Equipo;
 import com.pruebatecnica.prueba.repository.EquipoRepository;
 import java.util.List;
+import java.util.Optional;
+
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
+
 import org.springframework.stereotype.Service;
+
 
 @Service
 public class EquipoService implements IEquipoService {
-    @Autowired
-    private EquipoRepository repository;
 
-    public EquipoService(EquipoRepository equipoRepository) {
-        this.repository = repository;
-    }
+    @Autowired
+    private EquipoRepository equipoRepository;
+
+
     @Override
     public List<Equipo> getAll() {
-
-        return (List<Equipo>) repository.findAll();
+        return (List<Equipo>) equipoRepository.findAll();
     }
 
     @Override
-    public Equipo getById(Long id){
-        return repository.findById(id).get();
+    public Equipo getById(Long id) {
+        return equipoRepository.findById(id).orElse(null);
     }
 
     @Override
     public List<Equipo> searchByName(String nombre) {
-        return repository.findByNombreContaining(nombre);
+        return equipoRepository.findByNombreContaining(nombre);
     }
 
     @Override
-    public void save(Equipo equipo){
-        repository.save(equipo);
+    public Equipo save(Equipo equipo) {
+        if (equipo.getNombre() == null || equipo.getLiga() == null || equipo.getPais() == null) {
+            throw new IllegalArgumentException("Los datos del equipo son inválidos");
+        }
+        List<Equipo> equipoEncontrado = searchByName(equipo.getNombre());
+        if (!equipoEncontrado.isEmpty()) {
+            throw new IllegalArgumentException("Los datos del equipo son inválidos");
+        }
+        return equipoRepository.save(equipo);
     }
 
     @Override
-    public void remove(Long id){
-        repository.deleteById(id);
+    public void remove(Long id) {
+        Optional<Equipo> equipoOptional = equipoRepository.findById(id);
+        if (equipoOptional.isPresent()) {
+            equipoRepository.deleteById(id);
+        } else {
+            throw new EntityNotFoundException("Equipo no encontrado");
+        }
     }
+
 
     @Override
     public Equipo update(Long id, Equipo equipo) {
-        Equipo equipoExistente = repository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Equipo no encontrado con ID: " + id));
+        Equipo equipoExistente = equipoRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Equipo no encontrado"));
 
         equipoExistente.setNombre(equipo.getNombre());
         equipoExistente.setLiga(equipo.getLiga());
-        equipoExistente.setPais(equipo.getPais());
 
-        return repository.save(equipoExistente);
+        return equipoRepository.save(equipoExistente);
     }
-
 }
 

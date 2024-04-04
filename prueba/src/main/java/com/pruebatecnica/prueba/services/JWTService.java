@@ -19,10 +19,10 @@ public class JWTService {
 
     private static final String SECRET_KEY="q2W3e4R5t6Y7u8I9o0P1a2S3d4F5g6H7j8K9l0Z1x2C3v4B5n6M7m8Q9w0E1r2T3y4U5i6O7p";
     public String getToken(UserDetails user){
-        return getToken(new HashMap<>(), user);
+        return getTokenClaims(new HashMap<>(), user);
     }
 
-    private String getToken(Map<String,Object> extractClaims, UserDetails user) {
+    public String getTokenClaims(Map<String,Object> extractClaims, UserDetails user) {
         return Jwts
                 .builder()
                 .setClaims(extractClaims)
