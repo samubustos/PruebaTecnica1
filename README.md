@@ -22,7 +22,9 @@ mvn clean package
 ```
 Una vez generado el archivo .war de tu aplicación, puedes construir la imagen Docker utilizando el siguiente comando:
 
+```bash
 docker build --tag=service:latest .
+```
 
 ### Correr la Imagen de Docker
 Una vez que hayas generado la imagen Docker, puedes ejecutar el contenedor utilizando el siguiente comando:
