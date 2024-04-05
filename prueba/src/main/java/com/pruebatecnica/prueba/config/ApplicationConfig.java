@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 package com.pruebatecnica.prueba.config;
 
 
@@ -45,7 +45,6 @@ public class ApplicationConfig {
                 .orElseThrow(()-> new UsernameNotFoundException("Username not found"));
     }
 }
-=======
 package com.pruebatecnica.prueba.config;
 
 
@@ -92,4 +91,3 @@ public class ApplicationConfig {
                 .orElseThrow(()-> new UsernameNotFoundException("Username not found"));
     }
 }
->>>>>>> origin/main
