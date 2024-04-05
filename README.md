@@ -78,4 +78,3 @@ Las consultas las podemos realizar en http://localhost:8080/h2-console. Iniciand
 }
 ```
 Proyecto realizado por Bustos Puntis, Samuel.
->>>>>>> origin/main
