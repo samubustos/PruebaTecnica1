@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.pruebatecnica.prueba.controllers;
 
 import com.pruebatecnica.prueba.DTO.AuthResponse;
@@ -84,4 +83,3 @@ public class AuthController {
     }
 
 }
->>>>>>> origin/main
