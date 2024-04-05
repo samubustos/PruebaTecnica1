@@ -1,4 +1,5 @@
 com\pruebatecnica\prueba\repository\EquipoRepository.class
+<<<<<<< HEAD
 com\pruebatecnica\prueba\DTO\LoginRequest.class
 com\pruebatecnica\prueba\entities\Role.class
 com\pruebatecnica\prueba\config\ApplicationConfig.class
@@ -18,6 +19,25 @@ com\pruebatecnica\prueba\DTO\AuthResponse.class
 com\pruebatecnica\prueba\DTO\RegisterRequest$RegisterRequestBuilder.class
 com\pruebatecnica\prueba\config\OpenApiConfig.class
 com\pruebatecnica\prueba\DTO\AuthResponse$AuthResponseBuilder.class
+=======
+com\pruebatecnica\prueba\controllers\RegisterRequest.class
+com\pruebatecnica\prueba\entities\Role.class
+com\pruebatecnica\prueba\controllers\AuthResponse.class
+com\pruebatecnica\prueba\controllers\LoginRequest$LoginRequestBuilder.class
+com\pruebatecnica\prueba\config\ApplicationConfig.class
+com\pruebatecnica\prueba\entities\User$UserBuilder.class
+com\pruebatecnica\prueba\entities\Equipo.class
+com\pruebatecnica\prueba\services\IEquipoService.class
+com\pruebatecnica\prueba\controllers\AuthResponse$AuthResponseBuilder.class
+com\pruebatecnica\prueba\utils\JWTAuthFilter.class
+com\pruebatecnica\prueba\entities\User.class
+com\pruebatecnica\prueba\ServletInitializer.class
+com\pruebatecnica\prueba\PruebaApplication.class
+com\pruebatecnica\prueba\services\EquipoService.class
+com\pruebatecnica\prueba\services\JWTService.class
+com\pruebatecnica\prueba\controllers\RegisterRequest$RegisterRequestBuilder.class
+com\pruebatecnica\prueba\controllers\LoginRequest.class
+>>>>>>> origin/main
 com\pruebatecnica\prueba\controllers\EquipoController.class
 com\pruebatecnica\prueba\config\SecurityConfig.class
 com\pruebatecnica\prueba\repository\UserRepository.class
