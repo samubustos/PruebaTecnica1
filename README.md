@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # PruebaTecnica
 DUX SOFTWARE | PRUEBA TÉCNICA 
 =======
@@ -18,7 +17,7 @@ El sistema desarrollado con Spring Boot y Java 17 proporciona una API para gesti
 
 ## Instrucciones
 
-### Creación imagen docker
+### Creación imagen Docker
 
 Para crear la imagen de Docker primero debemos asegurarnos de que el proyecto está empaquetado y compilado. Para realizar esto podemos utilizar el siguiente comando con maven:
 --Debemos estar posicionados en la direccion donde se encuentra el archivo Dockerfile.
@@ -32,7 +31,7 @@ Con esto generamos nuestro archivo .war que nos va a servir para crear la imagen
 docker build --tag=service:latest .
 ```
 
-### iniciar el contenedor Docker 
+### Iniciar el contenedor Docker 
 Una vez que hayas generado la imagen Docker, puedes ejecutar el contenedor utilizando el siguiente comando:
 
 ```bash
