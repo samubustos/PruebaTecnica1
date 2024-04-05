@@ -21,6 +21,7 @@ Antes de generar la imagen de Docker, asegúrate de que el proyecto esté compil
 mvn clean package
 ```
 Una vez generado el archivo .war de tu aplicación, puedes construir la imagen Docker utilizando el siguiente comando:
+(Debemos estar posicionados en la direccion donde se encuentra el archivo Dockerfile)
 
 ```bash
 docker build --tag=service:latest .
@@ -30,7 +31,7 @@ docker build --tag=service:latest .
 Una vez que hayas generado la imagen Docker, puedes ejecutar el contenedor utilizando el siguiente comando:
 
 ```bash
-docker run -p8080:8080 --name duxsoftware-prueba-container duxsoftware-prueba:1.0
+docker run -p8080:8080 service:latest
 ```
 Esto iniciará la aplicación y la hará accesible en http://localhost:8080.
 
@@ -38,7 +39,7 @@ Esto iniciará la aplicación y la hará accesible en http://localhost:8080.
 Si nos dirigimos a http://localhost:8080/swagger-ui/index.html podemos probar la API utilizando Swagger. 
 
 ###Iniciar Sesión
-Primero necesitamos ir al authController y realizar el /login con el siguiente body:
+Primero necesitamos ir al AuthController y realizar el /login con el siguiente body:
 
 ```bash
 {
@@ -59,4 +60,4 @@ JDBC URL: jdbc:h2:mem:bd
 User Name: sa
 Password: (deja este campo vacío)
 Haz clic en "Connect".
-Ahora deberías estar conectado a la consola de H2 y listo para realizar tus consultas.
+Ahora deberías estar conectado a la consola de H2 y poder realizar tus consultas.
