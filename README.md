@@ -1,6 +1,7 @@
 # Prueba Técnica Dux Software - Desarrollador Full Stack
-
 Este repositorio contiene el código fuente y la documentación para la prueba técnica de Dux Software.
+
+El sistema desarrollado con Spring Boot y Java 17 proporciona una API para gestionar información de equipos de fútbol. Permite realizar consultas, búsquedas, creación, actualización y eliminación de equipos. Utiliza JWT para autenticación y H2 Database para la persistencia de datos en memoria. Se han escrito pruebas unitarias con mocks para asegurar la calidad del servicio. La aplicación está dockerizada para facilitar su despliegue y se ha generado documentación utilizando Swagger.
 
 ## Tecnologías Utilizadas
 
