@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.pruebatecnica.prueba.repository;
 
 import com.pruebatecnica.prueba.entities.Equipo;
@@ -13,17 +12,3 @@ public interface EquipoRepository extends CrudRepository<Equipo, Long> {
     List<Equipo> findByNombreContaining(String nombre);
     Optional<Equipo> findByNombre(String nombre);
 }
-=======
-package com.pruebatecnica.prueba.repository;
-
-import com.pruebatecnica.prueba.entities.Equipo;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
-
-import java.util.List;
-
-@Repository
-public interface EquipoRepository extends CrudRepository<Equipo, Long> {
-    List<Equipo> findByNombreContaining(String nombre);
-}
->>>>>>> origin/main
