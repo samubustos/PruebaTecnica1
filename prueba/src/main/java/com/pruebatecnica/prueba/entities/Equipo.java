@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 package com.pruebatecnica.prueba.entities;
 
 import jakarta.persistence.Entity;
@@ -35,7 +35,7 @@ public class Equipo {
 
 }
 
-=======
+
 package com.pruebatecnica.prueba.entities;
 
 import jakarta.persistence.Entity;
@@ -94,4 +94,4 @@ public class Equipo {
     }
 }
 
->>>>>>> origin/main
+
