@@ -1,4 +1,3 @@
-# PruebaTecnica
 DUX SOFTWARE | PRUEBA TÉCNICA 
 =======
 # Prueba Técnica Dux Software - Desarrollador Full Stack
