@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.pruebatecnica.prueba.entities;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -55,7 +54,6 @@ public class User implements UserDetails {
         return true;
     }
 }
-=======
 package com.pruebatecnica.prueba.entities;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -112,4 +110,3 @@ public class User implements UserDetails {
         return true;
     }
 }
->>>>>>> origin/main
