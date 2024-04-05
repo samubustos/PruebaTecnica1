@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.pruebatecnica.prueba.controllers;
 
 import com.pruebatecnica.prueba.entities.Equipo;
@@ -101,7 +100,7 @@ public class EquipoController {
         }
     }
 }
-=======
+
 package com.pruebatecnica.prueba.controllers;
 
 import com.pruebatecnica.prueba.entities.Equipo;
@@ -148,4 +147,4 @@ public class EquipoController {
     }
 }
 
->>>>>>> origin/main
+
