@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.pruebatecnica.prueba.services;
 
 import com.pruebatecnica.prueba.entities.Equipo;
@@ -70,7 +69,6 @@ public class EquipoService implements IEquipoService {
     }
 }
 
-=======
 package com.pruebatecnica.prueba.services;
 
 import com.pruebatecnica.prueba.entities.Equipo;
@@ -129,4 +127,3 @@ public class EquipoService implements IEquipoService {
 
 }
 
->>>>>>> origin/main
